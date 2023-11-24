@@ -1,7 +1,7 @@
 {
   "name": "todo-ts-delete",
   "version": "0.1.0",
-  "homepage": "https://frontcreator.github.io/ownapp",
+  "homepage": "https://shmailez.github.io/pwa-todo/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
