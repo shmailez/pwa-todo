@@ -16,8 +16,8 @@ const TodoItem: React.FC<TodoItemInterface> = ({ id, title, completed }) => {
         checked={completed}
         onChange={() => dispatch(toggleTask(id))}
       />
-      <span>{title}</span>
-      <span onClick={() => dispatch(removeTask(id))}> X </span>
+      <p>{title}</p>
+      <span onClick={() => dispatch(removeTask(id))}> DEL </span>
     </li>
   );
 };
