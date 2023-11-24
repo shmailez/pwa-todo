@@ -41,13 +41,22 @@ ul {
 
 li{ 
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
   background-color: azure;
   color: darkblue;
+}
+
+p {
+  margin: 0;
+}
+
+li div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
 }
 
 li span{ 

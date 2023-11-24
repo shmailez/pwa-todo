@@ -3,6 +3,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 type Todo = {
     id: string, 
     title: string, 
+    date: string,
     completed: boolean
 }
 
@@ -26,6 +27,7 @@ const TodoSlice = createSlice({
             state.todos.push({
                 id: new Date().toISOString(),
                 title: actions.payload,
+                date: new Date().toDateString(),
                 completed: false
             })
         },
