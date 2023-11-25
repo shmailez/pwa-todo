@@ -3,12 +3,13 @@ import { addTask } from "../redux/Slice";
 import { useAppDispatch } from "../hooks";
 
 interface TodoInputProps {
+  close: () => void;
   title: string;
   setTitle: (str: string) => void;
   handleTitle: () => void;
 }
 
-const TodoInput: React.FC<TodoInputProps> = () => {
+const TodoInput: React.FC<TodoInputProps> = ({ close }) => {
   const [title, setTitle] = useState("");
   const dispatch = useAppDispatch();
 
@@ -20,7 +21,10 @@ const TodoInput: React.FC<TodoInputProps> = () => {
   };
 
   return (
-    <div>
+    <div className="todoInput">
+      <button className="close" onClick={() => close()}>
+        close
+      </button>
       <input value={title} onChange={(e) => setTitle(e.target.value)} />
       <button onClick={handleTitle}> add </button>
     </div>

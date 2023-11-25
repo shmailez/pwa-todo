@@ -4,33 +4,30 @@ import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [today, setToday] = useState();
   const day: string = new Date().toDateString();
+  const [vis, setVis] = useState(false);
 
-  // const newDate = () => {
-  //   const day: string
-  // };
-
-  // useEffect(() => {
-  //   const day: string = new Date().toDateString();
-  //   if (day) {
-  //     setToday(day);
-  //   }
-  // }, []);
+  const handlerVis = () => {
+    setVis((vis) => !vis);
+  };
 
   return (
     <div className="App">
       <header className="App-header">
+        {vis && (
+          <TodoInput
+            close={handlerVis}
+            title={""}
+            setTitle={function (str: string): void {
+              throw new Error("Function not implemented.");
+            }}
+            handleTitle={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
+        )}
         <h1>today {day} </h1>
-        <TodoInput
-          title={""}
-          setTitle={function (str: string): void {
-            throw new Error("Function not implemented.");
-          }}
-          handleTitle={function (): void {
-            throw new Error("Function not implemented.");
-          }}
-        />
+        <button onClick={() => handlerVis()}>add task</button>
         <TodoList />
       </header>
     </div>

@@ -15,7 +15,6 @@ const TodoItem: React.FC<TodoItemInterface> = ({
   date,
 }) => {
   const dispatch = useAppDispatch();
-  console.log(date);
   return (
     <li key={id}>
       <p>from {date}</p>

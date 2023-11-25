@@ -10,3 +10,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.todoInput {
+  position: absolute;
+  top: 20px;
+  background-color: rgb(159, 182, 202);
+  /* padding: 60px; */
+  border-radius: 5px;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px
+}
