@@ -7,11 +7,12 @@ const TodoWindow: React.FC = () => {
     (todo) => todo.id === param.id
   );
 
+  console.log(item);
   return (
     <main>
-      <p>{item.title}</p>
+      {/* <p>{item.title}</p>
       <p>{item.date}</p>
-      {item.completed ? <p>completed</p> : <p>not compltetd</p>}
+      {item.completed ? <p>completed</p> : <p>not compltetd</p>} */}
       <Link to={"/"}>Назад</Link>
     </main>
   );
