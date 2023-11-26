@@ -1,4 +1,5 @@
 body {
+  /* position: relative; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -64,4 +65,13 @@ li span{
   border-radius: 5px;
   background-color: rgb(20, 88, 88);
   color: aliceblue;
+}
+
+main{
+  position:absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(22, 103, 30);
+  width: 100%;
+  height: 100%;
 }

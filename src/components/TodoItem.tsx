@@ -1,5 +1,6 @@
 import { useAppDispatch } from "../hooks";
 import { removeTask, toggleTask } from "../redux/Slice";
+import { Link } from "react-router-dom";
 
 interface TodoItemInterface {
   id: string;
@@ -18,6 +19,7 @@ const TodoItem: React.FC<TodoItemInterface> = ({
   return (
     <li key={id}>
       <p>from {date}</p>
+      <Link to={`/${id}`}>MORE</Link>
       <div>
         <input
           type="checkbox"
