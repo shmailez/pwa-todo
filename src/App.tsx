@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <Routes>
           <Route path="/" element={<BasePage />} />
-          <Route path="/:id" element={<TodoPage />} />
+          {i && <Route path="/:id" element={<TodoPage />} />}
         </Routes>
       </header>
     </div>
