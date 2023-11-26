@@ -1,12 +1,7 @@
 import { Link, Params, useParams } from "react-router-dom";
 import { useAppSelector } from "../hooks";
 
-interface TodoWi {
-  id: string;
-  handlerVis: () => void;
-}
-
-const TodoWindow: React.FC<TodoWi> = ({ handlerVis }) => {
+const TodoWindow: React.FC = () => {
   const param: Readonly<Params<string>> = useParams();
   const item: any = useAppSelector((state) => state.todos.todos).find(
     (todo) => todo.id === param.id

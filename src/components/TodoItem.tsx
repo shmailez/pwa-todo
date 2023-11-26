@@ -18,7 +18,6 @@ const TodoItem: React.FC<TodoItemInterface> = ({
   const dispatch = useAppDispatch();
   return (
     <li key={id}>
-      <p>from {date}</p>
       <Link to={`/${id}`}>MORE</Link>
       <div>
         <input
