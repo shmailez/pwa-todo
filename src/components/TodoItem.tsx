@@ -18,7 +18,7 @@ const TodoItem: React.FC<TodoItemInterface> = ({
   const dispatch = useAppDispatch();
   return (
     <li key={id}>
-      <Link to={`/${id}`}>MORE</Link>
+      <Link to={`/pwa-todo/${id}`}>MORE</Link>
       <div>
         <input
           type="checkbox"

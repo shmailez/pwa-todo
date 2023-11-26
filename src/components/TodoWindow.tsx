@@ -18,7 +18,7 @@ const TodoWindow: React.FC = () => {
         </div>
       )}
 
-      <Link to={"/"}>Назад</Link>
+      <Link to={"/pwa-todo/"}>Назад</Link>
     </main>
   );
 };

@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Routes>
-          <Route path="/" element={<BasePage />} />
-          {i && <Route path="/:id" element={<TodoPage />} />}
+          <Route path="/pwa-todo/" element={<BasePage />} />
+          {i && <Route path="/pwa-todo/:id" element={<TodoPage />} />}
         </Routes>
       </header>
     </div>
