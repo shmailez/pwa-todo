@@ -24,3 +24,8 @@
   right: 10px;
   top: 10px
 }
+
+.generalColumn {
+  display: flex;
+  flex-direction: column-reverse;
+}

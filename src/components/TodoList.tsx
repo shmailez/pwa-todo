@@ -5,7 +5,7 @@ const TodoList: React.FC = () => {
   const list = useAppSelector((state) => state.todos.todos);
 
   return (
-    <ul>
+    <ul className="generalColumn">
       {list.map((todo) => (
         <TodoItem key={todo.id} {...todo} />
       ))}
