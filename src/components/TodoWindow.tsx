@@ -10,9 +10,9 @@ const TodoWindow: React.FC = () => {
   console.log(item);
   return (
     <main>
-      {/* <p>{item.title}</p>
-      <p>{item.date}</p>
-      {item.completed ? <p>completed</p> : <p>not compltetd</p>} */}
+      <p>{item.title}</p>
+      {/* <p>{item.date}</p>
+      {item.completed ? <p>completed</p> : <p>not compltetd</p>}  */}
       <Link to={"/"}>Назад</Link>
     </main>
   );
