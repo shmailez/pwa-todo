@@ -20,13 +20,18 @@ const TodoInput: React.FC<TodoInputProps> = ({ close }) => {
     }
   };
 
+  const cliker = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    handleTitle(), close();
+  };
+
   return (
     <div className="todoInput">
       <button className="close" onClick={() => close()}>
         close
       </button>
       <input value={title} onChange={(e) => setTitle(e.target.value)} />
-      <button onClick={handleTitle}> add </button>
+      <button onClick={cliker}> add </button>
     </div>
   );
 };

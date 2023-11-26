@@ -5,7 +5,7 @@ import { Routes, Route, useParams } from "react-router-dom";
 
 function App() {
   const i = useParams();
-  console.log(i);
+  // console.log(i);
   return (
     <div className="App">
       <header className="App-header">
