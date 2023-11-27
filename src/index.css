@@ -13,13 +13,6 @@ code {
     monospace;
 }
 
-input {
-  /* margin: 75px 0 75px 25px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 0; */
-}
-
 input:checked+.taskItemLink {
   text-decoration:line-through;
   background-color: rgba(152, 204, 206, 0.186);
@@ -40,26 +33,9 @@ ul {
   padding: 0;
 }
 
-li{ 
-  
-}
-
 p {
   margin: 0;
 }
-
-/* li div {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-around;
-} */
-
-/* li span{ 
-  padding: 5px;
-  border-radius: 5px;
-  background-color: rgb(20, 88, 88);
-  color: aliceblue;
-} */
 
 main{
   position:absolute;

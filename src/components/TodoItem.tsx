@@ -19,10 +19,9 @@ const TodoItem: React.FC<TodoItemInterface> = ({
   return (
     <>
       <li className="taskItem" key={id}>
-        {/* <Link to={`/pwa-todo/${id}`}>MORE</Link> */}
         <div className="taskItemdiv">
           <input
-            className="taskItemCheck"
+            className="taskItemCheck my-checkbox-x2"
             type="checkbox"
             checked={completed}
             onChange={() => dispatch(toggleTask(id))}
