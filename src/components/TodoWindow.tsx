@@ -35,11 +35,13 @@ const TodoWindow: React.FC = () => {
         <div>
           <p>{item.title}</p>
           <p>{item.date}</p>
-          {item.completed ? <p>completed</p> : <p>not compltetd</p>}
+          {item.completed ? <p>Задача готова</p> : <p>Задача не готова</p>}
         </div>
       )}
 
-      <Link to={"/pwa-todo/"}>Назад</Link>
+      <Link className="link" to={"/pwa-todo/"}>
+        Назад
+      </Link>
       {vis ? (
         <form onSubmit={formSubmit}>
           <input

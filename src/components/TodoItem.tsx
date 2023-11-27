@@ -17,18 +17,22 @@ const TodoItem: React.FC<TodoItemInterface> = ({
 }) => {
   const dispatch = useAppDispatch();
   return (
-    <li key={id}>
-      <Link to={`/pwa-todo/${id}`}>MORE</Link>
-      <div>
-        <input
-          type="checkbox"
-          checked={completed}
-          onChange={() => dispatch(toggleTask(id))}
-        />
-        <p>{title}</p>
-        <span onClick={() => dispatch(removeTask(id))}> DEL </span>
-      </div>
-    </li>
+    <>
+      <li className="taskItem" key={id}>
+        {/* <Link to={`/pwa-todo/${id}`}>MORE</Link> */}
+        <div>
+          <input
+            type="checkbox"
+            checked={completed}
+            onChange={() => dispatch(toggleTask(id))}
+          />
+          <Link className="link" to={`/pwa-todo/${id}`}>
+            <p>{title}</p>
+          </Link>
+          <span onClick={() => dispatch(removeTask(id))}> DEL </span>
+        </div>
+      </li>
+    </>
   );
 };
 

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pwa-todo/static/css/main.1d045e65.css",
-    "main.js": "/pwa-todo/static/js/main.b42301ec.js",
+    "main.css": "/pwa-todo/static/css/main.7a98c2b3.css",
+    "main.js": "/pwa-todo/static/js/main.26e8bcf6.js",
     "static/js/787.c3af4bf1.chunk.js": "/pwa-todo/static/js/787.c3af4bf1.chunk.js",
     "index.html": "/pwa-todo/index.html",
-    "main.1d045e65.css.map": "/pwa-todo/static/css/main.1d045e65.css.map",
-    "main.b42301ec.js.map": "/pwa-todo/static/js/main.b42301ec.js.map",
+    "main.7a98c2b3.css.map": "/pwa-todo/static/css/main.7a98c2b3.css.map",
+    "main.26e8bcf6.js.map": "/pwa-todo/static/js/main.26e8bcf6.js.map",
     "787.c3af4bf1.chunk.js.map": "/pwa-todo/static/js/787.c3af4bf1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d045e65.css",
-    "static/js/main.b42301ec.js"
+    "static/css/main.7a98c2b3.css",
+    "static/js/main.26e8bcf6.js"
   ]
 }

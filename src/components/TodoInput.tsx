@@ -30,7 +30,11 @@ const TodoInput: React.FC<TodoInputProps> = ({ close }) => {
       <button className="close" onClick={() => close()}>
         close
       </button>
-      <input value={title} onChange={(e) => setTitle(e.target.value)} />
+      <input
+        className="addInput"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
       <button onClick={cliker}> add </button>
     </div>
   );
