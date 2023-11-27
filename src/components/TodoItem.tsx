@@ -20,16 +20,23 @@ const TodoItem: React.FC<TodoItemInterface> = ({
     <>
       <li className="taskItem" key={id}>
         {/* <Link to={`/pwa-todo/${id}`}>MORE</Link> */}
-        <div>
+        <div className="taskItemdiv">
           <input
+            className="taskItemCheck"
             type="checkbox"
             checked={completed}
             onChange={() => dispatch(toggleTask(id))}
           />
-          <Link className="link" to={`/pwa-todo/${id}`}>
-            <p>{title}</p>
+          <Link className="taskItemLink" to={`/pwa-todo/${id}`}>
+            <p className="taskTitle">{title}</p>
           </Link>
-          <span onClick={() => dispatch(removeTask(id))}> DEL </span>
+          <span
+            className="taskItemButton"
+            onClick={() => dispatch(removeTask(id))}
+          >
+            {" "}
+            DEL{" "}
+          </span>
         </div>
       </li>
     </>

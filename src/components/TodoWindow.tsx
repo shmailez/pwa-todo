@@ -30,31 +30,56 @@ const TodoWindow: React.FC = () => {
   };
 
   return (
-    <main>
-      {item && (
-        <div>
-          <p>{item.title}</p>
-          <p>{item.date}</p>
-          {item.completed ? <p>Задача готова</p> : <p>Задача не готова</p>}
+    <div className="todoWindow ">
+      {/* <div className="todoWindowDiv"> */}
+      <div className="todoWindowTitle">
+        <p>Задача:</p>
+        <p>{item.title}</p>
+      </div>
+
+      <div className="todoWindowGeneral">
+        <div className="todoWindowDate">
+          <p>Задача поставлена:</p>
+          <span>{item.date}</span>
+        </div>
+        <div className="todoWindowStatus">
+          <p>Статус:</p>
+          {item.completed ? (
+            <span>Задача готова</span>
+          ) : (
+            <span>Задача не готова</span>
+          )}
+        </div>
+      </div>
+
+      {vis ? (
+        <div className="todoWindowDescription">
+          <span>Описание:</span>
+          <form onSubmit={formSubmit}>
+            <input
+              className="descriptionInput"
+              value={currentTitle}
+              onChange={(e) => setCurrentTitle(e.target.value)}
+            />
+          </form>
+        </div>
+      ) : (
+        <div className="todoWindowDescription">
+          <span>Описание:</span>
+          <p className="description" onClick={() => setVis((vis) => !vis)}>
+            {item.description}
+          </p>
         </div>
       )}
 
-      <Link className="link" to={"/pwa-todo/"}>
+      <button className="addDescription" onClick={formSubmit}>
+        Добавить описание
+      </button>
+
+      <Link className="todoWindowLink" to={"/pwa-todo/"}>
         Назад
       </Link>
-      {vis ? (
-        <form onSubmit={formSubmit}>
-          <input
-            value={currentTitle}
-            onChange={(e) => setCurrentTitle(e.target.value)}
-          />
-        </form>
-      ) : (
-        <p onClick={() => setVis((vis) => !vis)}>{item.description}</p>
-      )}
-
-      <button onClick={formSubmit}>Добавить описание</button>
-    </main>
+    </div>
   );
 };
 

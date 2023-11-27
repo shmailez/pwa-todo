@@ -23,8 +23,11 @@ const BasePage = () => {
           }}
         />
       )}
-      <h1>today {day} </h1>
-      <button onClick={() => handlerVis()}>add task</button>
+      <h1>Сегодня:</h1>
+      <p>{day}</p>
+      <button className="generalAddButton" onClick={() => handlerVis()}>
+        Добавить задачу
+      </button>
       <TodoList />
     </>
   );

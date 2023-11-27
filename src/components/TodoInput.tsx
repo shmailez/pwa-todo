@@ -22,20 +22,22 @@ const TodoInput: React.FC<TodoInputProps> = ({ close }) => {
 
   const cliker = () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    handleTitle(), close();
+    handleTitle(), close(), window.scrollTo(0, 0);
   };
 
   return (
     <div className="todoInput">
-      <button className="close" onClick={() => close()}>
-        close
+      <button className="todoInputCloseButton" onClick={() => close()}>
+        Закрыть
       </button>
       <input
         className="addInput"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button onClick={cliker}> add </button>
+      <button className="todoInputAddButton" onClick={cliker}>
+        Добавить
+      </button>
     </div>
   );
 };

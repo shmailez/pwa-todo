@@ -19,19 +19,25 @@
   width: 100%;
 }
 
-.close {
+.generalAddButton {
+  margin: 30px 0;
+  background-color: #1761f6;
+}
+
+.todoInputCloseButton {
   position: absolute;
   right: 10px;
-  top: 10px
+  top: 10px;
+  background-color: #1761f6;
+}
+
+.todoInputAddButton {
+  background-color: #1761f6;
 }
 
 .generalColumn {
   display: flex;
   flex-direction: column-reverse;
-}
-
-.link{
-  text-decoration: none;
 }
 
 .taskItem {
@@ -40,14 +46,38 @@
   margin: 10px;
   /* padding: 10px; */
   border-radius: 5px;
-  background-color: azure;
-  color: darkblue;
+  /* background-color: azure; */
+  color: rgb(191, 191, 220);
 }
 
-.taskItem div{
+.taskItemLink{
+  text-decoration: none;
+  /* background-color: blueviolet; */
+  width: 100%;
+  color: aliceblue;
+}
+
+.taskItemdiv{
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
+  /* background-color: aqua; */
+  margin: 10px;
+}
+
+.taskItemCheck {
+  /* background-color: black; */
+  margin:0 20px;
+  cursor: pointer;
+}
+
+.taskItemButton {
+  padding: 5px;
+  margin: 0 10px;
+  border-radius: 5px;
+  /* background-color: rgb(20, 88, 88); */
+  color: aliceblue;
+  cursor: pointer;
 }
 
 .addInput {
@@ -55,4 +85,83 @@
   padding: 10px;
   border-radius: 5px;
   border: 0;
+}
+
+.todoWindow {
+  /* position:absolute;
+  top: 0;
+  left: 0; */
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(22, 103, 30); */
+  width: 100%;
+  height: 100%;
+}
+
+/* .todoWindowDiv {
+  background-color: cadetblue;
+} */
+
+.todoWindowLink{
+  /* background-color: blue; */
+  text-decoration: none;
+  color: azure;
+  width: 100px;
+  margin: 30px 0;
+}
+
+.todoWindowTitle {
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 30px 0;
+}
+
+.todoWindowGeneral{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.todoWindowDate {
+  /* background-color: blanchedalmond; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ 
+}
+
+/* .todoWindowDate span{
+  background-color: antiquewhite;
+} */
+
+.todoWindowStatus {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.todoWindowDescription {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.description {
+  text-align: left;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.descriptionInput {
+  margin: 30px 0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.addDescription {
+  background-color: aqua;
+  width: 100px;
 }

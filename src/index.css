@@ -20,9 +20,9 @@ input {
   border: 0; */
 }
 
-input:checked+.link {
+input:checked+.taskItemLink {
   text-decoration:line-through;
-  background-color: rgb(152, 204, 206);
+  background-color: rgba(152, 204, 206, 0.186);
   border-radius: 5px;
 }
 
@@ -54,12 +54,12 @@ p {
   justify-content: space-around;
 } */
 
-li span{ 
+/* li span{ 
   padding: 5px;
   border-radius: 5px;
   background-color: rgb(20, 88, 88);
   color: aliceblue;
-}
+} */
 
 main{
   position:absolute;
