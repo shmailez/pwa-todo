@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 import { useState } from "react";
 import { addTask } from "../redux/Slice";
 import { useAppDispatch } from "../hooks";

@@ -1,6 +1,6 @@
 import { Link, Params, useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../hooks";
-import { updateDescript } from "../redux/Slice";
+import { updateDeadline, updateDescript } from "../redux/Slice";
 import { useState } from "react";
 
 const TodoWindow: React.FC = () => {
@@ -10,11 +10,24 @@ const TodoWindow: React.FC = () => {
     (todo) => todo.id === param.id
   );
 
+  console.log(item);
+
   const dispatch = useAppDispatch();
 
   const [vis, setVis] = useState(false);
+  const [visDead, setVisDead] = useState(false);
+
+  const [currentDeadline, setCurrentDeadline] = useState(item.deadline);
 
   const [currentTitle, setCurrentTitle] = useState(item.description);
+
+  const deadlineSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    setVisDead((vis) => !vis);
+
+    dispatch(updateDeadline({ id: item.id, deadline: currentDeadline }));
+  };
 
   const formSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -31,7 +44,6 @@ const TodoWindow: React.FC = () => {
 
   return (
     <div className="todoWindow ">
-      {/* <div className="todoWindowDiv"> */}
       <div className="todoWindowTitle">
         <p>Задача:</p>
         <p>{item.title}</p>
@@ -51,6 +63,33 @@ const TodoWindow: React.FC = () => {
           )}
         </div>
       </div>
+
+      {visDead ? (
+        <div className="todoWindowDeadline">
+          <span>Закончить до:</span>
+          <form onSubmit={deadlineSubmit}>
+            <input
+              className="deadline"
+              type="date"
+              value={currentDeadline}
+              onChange={(e) => setCurrentDeadline(e.target.value)}
+            />
+          </form>
+        </div>
+      ) : (
+        <>
+          <div className="todoWindowDeadline">
+            <span>Закончить до:</span>
+            <p className="deadline" onClick={() => setVisDead((vis) => !vis)}>
+              {item.deadline}
+            </p>
+          </div>
+        </>
+      )}
+
+      <button className="addDescription" onClick={deadlineSubmit}>
+        Добавить дату
+      </button>
 
       {vis ? (
         <div className="todoWindowDescription">

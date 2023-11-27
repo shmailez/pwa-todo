@@ -5,7 +5,8 @@ type Todo = {
     title: string, 
     date: string,
     completed: boolean,
-    description: string
+    description: string,
+    deadline: string
 }
 
 type TodoState = {
@@ -30,7 +31,8 @@ const TodoSlice = createSlice({
                 title: actions.payload,
                 date: new Date().toDateString(),
                 completed: false, 
-                description: ''
+                description: '',
+                deadline: ''
             })
         },
         removeTask(state, actions: PayloadAction<string>) {
@@ -48,11 +50,19 @@ const TodoSlice = createSlice({
             if (upTodo) {
                 upTodo.description = obj.description
             }
+        },
+        updateDeadline(state, actions) {
+            const obj = actions.payload
+            let upTodo = state.todos.find(todo => todo.id === obj.id)
+            if (upTodo) {
+                console.log(upTodo)
+                upTodo.deadline = obj.deadline
+            }
         }
 
     }
 })
 
-export const {addTask, removeTask, toggleTask, updateDescript} = TodoSlice.actions
+export const {addTask, removeTask, toggleTask, updateDescript, updateDeadline} = TodoSlice.actions
 
 export default TodoSlice.reducer
