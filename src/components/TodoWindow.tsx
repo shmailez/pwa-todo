@@ -10,8 +10,6 @@ const TodoWindow: React.FC = () => {
     (todo) => todo.id === param.id
   );
 
-  console.log(item);
-
   const dispatch = useAppDispatch();
 
   const [vis, setVis] = useState(false);
@@ -44,6 +42,10 @@ const TodoWindow: React.FC = () => {
 
   return (
     <div className="todoWindow ">
+      <Link className="todoWindowLink" to={"/pwa-todo/"}>
+        🡠
+      </Link>
+
       <div className="todoWindowTitle">
         <p>Задача:</p>
         <p>{item.title}</p>
@@ -69,8 +71,8 @@ const TodoWindow: React.FC = () => {
           <span>Закончить до:</span>
           <form onSubmit={deadlineSubmit}>
             <input
-              className="deadline"
-              type="date"
+              className="deadlineInput"
+              type="datetime-local"
               value={currentDeadline}
               onChange={(e) => setCurrentDeadline(e.target.value)}
             />
@@ -80,7 +82,10 @@ const TodoWindow: React.FC = () => {
         <>
           <div className="todoWindowDeadline">
             <span>Закончить до:</span>
-            <p className="deadline" onClick={() => setVisDead((vis) => !vis)}>
+            <p
+              className="deadlineSpan"
+              onClick={() => setVisDead((vis) => !vis)}
+            >
               {item.deadline}
             </p>
           </div>
@@ -114,10 +119,6 @@ const TodoWindow: React.FC = () => {
       <button className="addDescription" onClick={formSubmit}>
         Добавить описание
       </button>
-
-      <Link className="todoWindowLink" to={"/pwa-todo/"}>
-        Назад
-      </Link>
     </div>
   );
 };

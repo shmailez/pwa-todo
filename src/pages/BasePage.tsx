@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TodoInput from "../components/TodoInput";
 import TodoList from "../components/TodoList";
+import { useColorTheme } from "../hooks";
 
 const BasePage = () => {
   const day: string = new Date().toDateString();
@@ -9,6 +10,13 @@ const BasePage = () => {
   const handlerVis = () => {
     setVis((vis) => !vis);
   };
+
+  const { toggleColorTheme } = useColorTheme();
+
+  const onChangeTheme = () => {
+    toggleColorTheme();
+  };
+
   return (
     <>
       {vis && (
@@ -23,6 +31,9 @@ const BasePage = () => {
           }}
         />
       )}
+      <button className="themeToggle" onClick={onChangeTheme}>
+        Change theme
+      </button>
       <h1>Сегодня:</h1>
       <p>{day}</p>
       <button className="generalAddButton" onClick={() => handlerVis()}>
@@ -34,3 +45,6 @@ const BasePage = () => {
 };
 
 export default BasePage;
+function toggleColorTheme() {
+  throw new Error("Function not implemented.");
+}

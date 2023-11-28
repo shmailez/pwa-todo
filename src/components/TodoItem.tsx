@@ -7,13 +7,14 @@ interface TodoItemInterface {
   title: string;
   completed: boolean;
   date: string;
+  deadline: string;
 }
 
 const TodoItem: React.FC<TodoItemInterface> = ({
   id,
   title,
   completed,
-  date,
+  deadline,
 }) => {
   const dispatch = useAppDispatch();
   return (
@@ -37,6 +38,9 @@ const TodoItem: React.FC<TodoItemInterface> = ({
             DEL{" "}
           </span>
         </div>
+        {deadline && (
+          <span className="taskItemDeadline">Закончить до: {deadline}</span>
+        )}
       </li>
     </>
   );

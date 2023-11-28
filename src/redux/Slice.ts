@@ -55,7 +55,6 @@ const TodoSlice = createSlice({
             const obj = actions.payload
             let upTodo = state.todos.find(todo => todo.id === obj.id)
             if (upTodo) {
-                console.log(upTodo)
                 upTodo.deadline = obj.deadline
             }
         }

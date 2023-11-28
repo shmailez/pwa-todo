@@ -1,5 +1,5 @@
 .App-header {  
-  background-color: #282c34;
+  background-color: var(--color-background);
   min-height: 100vh;
   text-align: center;
   display: flex;
@@ -7,7 +7,14 @@
   align-items: center;
   padding: 0 10px;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:  var(--color-font);
+}
+
+.themeToggle {
+  background-color: #878787;
+  position: absolute;
+  top: 5px;
+  right: 5px
 }
 
 .todoInput {
@@ -45,13 +52,13 @@
   flex-direction: column;
   margin: 10px;
   border-radius: 5px;
-  color: rgb(191, 191, 220);
+  color:  var(--color-font);
 }
 
 .taskItemLink{
   text-decoration: none;
   width: 100%;
-  color: aliceblue;
+  color:  var(--color-font);
 }
 
 .taskItemdiv{
@@ -67,7 +74,7 @@
   transform: scale(2);
   width: 1.5em;
   height: 1em;
-  background-color:aliceblue ;
+  background-color:var(--color-input);
   border-radius: 50%;
   /* vertical-align: middle; */
   border: 1px solid #ddd;
@@ -80,11 +87,15 @@
   background-color: #1761f6;
 }
 
+.taskItemDeadline {
+  font-size: small;
+}
+
 .taskItemButton {
   padding: 5px;
   margin: 0 10px;
   border-radius: 5px;
-  color: aliceblue;
+  color:  var(--color-font);
   cursor: pointer;
 }
 
@@ -104,16 +115,16 @@
 
 .todoWindowLink{
   text-decoration: none;
-  color: azure;
-  width: 100px;
-  margin: 30px 0;
+  color:  var(--color-font);
+  width: 20px;
+  margin: 15px 0;
 }
 
 .todoWindowTitle {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin: 30px 0;
+  margin: 10px 0 30px 0;
 }
 
 .todoWindowGeneral{
@@ -141,15 +152,24 @@
 }
 
 .todoWindowDescription {
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 
-.deadline {
+.deadlineInput {
+  background-color: #1761f6;
+  color: #ddd;
+  font-size: large;
+  border: none;
   margin: 20px 0;
   border-radius: 10px;
+  padding: 3px;
+}
+
+.deadlineSpan {
+  margin: 20px 0;
 }
 
 .description {
@@ -165,6 +185,6 @@
 }
 
 .addDescription {
-  background-color: aqua;
+  background-color:#1761f6;
   width: 100px;
 }
