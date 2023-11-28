@@ -45,6 +45,3 @@ const BasePage = () => {
 };
 
 export default BasePage;
-function toggleColorTheme() {
-  throw new Error("Function not implemented.");
-}
